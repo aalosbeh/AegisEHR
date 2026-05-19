@@ -1,5 +1,4 @@
-# Aegis-EHR -- Runnable Research Code
-
+# Aegis-EHR 
 Author: **Anas AlSobeh, Utah Valley University**, with Amani Shatnawi and
 Rafat Hammad, 2026.
 
