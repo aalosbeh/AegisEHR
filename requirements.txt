@@ -1,0 +1,16 @@
+# Aegis-EHR research code dependencies
+# Pinned versions for reproducibility
+torch==2.3.0
+transformers==4.40.0
+numpy==1.26.4
+scipy==1.13.0
+pandas==2.2.2
+matplotlib==3.8.4
+seaborn==0.13.2
+scikit-learn==1.4.2
+tqdm==4.66.2
+gradio==4.31.0
+
+# LangGraph 0.0.47 is optional (heavy dep).
+# The code falls back to a minimal in-process orchestrator if LangGraph is not present.
+# langgraph==0.0.47
