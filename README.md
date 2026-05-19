@@ -4,9 +4,7 @@ Rafat Hammad, 2026.
 
 This package reproduces the figures and headline tables from the paper
 *Aegis-EHR: A Decentralized Agentic Mesh for Autonomous Clinical
-Reconciliation and Interoperability*. Every paper-reported metric is
-**[SIMULATED]** in the CSV outputs because we do not redistribute the
-real multi-site clinical corpus.
+Reconciliation and Interoperability*. 
 
 ---
 
