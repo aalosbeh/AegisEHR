@@ -81,7 +81,3 @@ repeating generation. Model digests, decoding options and dates are stored in `r
 * **Grounding of external drafts.** Facts in an LLM draft that cannot be matched to any span of the note are dropped.
 * **Weakest-link aggregation.** The joint confidence is a weighted noisy-AND of calibrated agent probabilities.
 
-## Limitations
-
-All data are synthetic, the generator and the parser share a terminology and documentation grammar, the knowledge
-bases were written by the authors, and no clinician evaluation has been performed. See Section 7.1 of the paper.
