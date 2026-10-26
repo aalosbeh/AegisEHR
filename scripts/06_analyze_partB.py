@@ -126,7 +126,12 @@ def main():
     for p in sorted(LLM.glob("*.jsonl")):
         tag = p.stem
         runs[tag] = {d["id"]: d for d in map(json.loads, p.open())}
-    models = sorted({t.rsplit("_", 1)[0] for t in runs if t.endswith("_direct")})
+    # a model enters only once its direct run covers the whole subset; partial runs are reported, not analysed
+    models = sorted({t.rsplit("_", 1)[0] for t in runs if t.endswith("_direct")
+                     and len(set(runs[t]) & set(ids)) >= len(ids) * 0.95})
+    for t in sorted(runs):
+        if t.endswith("_direct") and t.rsplit("_", 1)[0] not in models:
+            print(f"skipping incomplete run {t}: {len(runs[t])}/{len(ids)}")
     common = [i for i in ids if all(i in runs[f"{m}_direct"] for m in models)]
     for v in ("validator", "reflect"):
         for m in models:
@@ -177,7 +182,13 @@ def main():
                                  mean_wall_s=float(np.mean([runs[tag][i]["wall"] for i in common])),
                                  median_wall_s=float(np.median([runs[tag][i]["wall"] for i in common])),
                                  tokens_per_s=float(np.sum([runs[tag][i]["output_tokens"] for i in common]) /
-                                                    np.sum([runs[tag][i]["wall"] for i in common])))
+                                                    np.sum([runs[tag][i]["wall"] for i in common])),
+                                 unparsed_length_cutoff=sum(runs[tag][i].get("bundle") is None and
+                                                            runs[tag][i].get("done_reason") == "length" for i in common),
+                                 unparsed_whitespace_runaway=sum(runs[tag][i].get("bundle") is None and
+                                                                 len(runs[tag][i].get("raw") or "") -
+                                                                 len((runs[tag][i].get("raw") or "").rstrip()) >= 20
+                                                                 for i in common))
         # Aegis-EHR on this model's drafts --------------------------------------------
         for an, cfg in ABL.items():
             sname = f"{m}_aegis" if an == "aegis" else f"{m}_aegis_{an}"
@@ -186,7 +197,11 @@ def main():
                 d = runs[f"{m}_direct"][i]
                 rec = recs[i]
                 F = parse_note(rec["text"], lex, "full", headers)
-                o = mesh.run(rec["text"], cfg, draft=d.get("bundle"), F=F)
+                if d.get("bundle") is None:
+                    # unparsable LLM output: the gate withholds it; no silent fallback to Aegis-EHR's own parser
+                    o = dict(bundle=None, alerts=[], reports={}, pre_valid=False, post_valid=False)
+                else:
+                    o = mesh.run(rec["text"], cfg, draft=d["bundle"], F=F)
                 if o["bundle"] is None:
                     e = evaluate_record(rec, {"resourceType": "Bundle", "type": "collection", "entry": []}, [],
                                         {"valid": False, "errors": [], "by_kind": {}})
@@ -305,7 +320,8 @@ def main():
         adj = stats.holm(pv)
         T["tests"][m] = {k: dict(p=pv[k], p_holm=adj[k], **ef[k]) for k in pv}
         T["tests"][m]["_family"] = f"{len(pv)} comparisons for {m}: Holm-Bonferroni within model"
-    T["meta"] = {p.stem: json.loads(p.read_text()) for p in LLM.glob("*.meta.json")}
+    T["meta"] = {p.stem: json.loads(p.read_text()) for p in LLM.glob("*.meta.json")
+                 if p.stem.replace(".meta", "").rsplit("_", 1)[0] in models}
     T["records"] = common
     (TAB / "partB.json").write_text(json.dumps(T, indent=1, default=lambda o: o.tolist() if hasattr(o, "tolist") else str(o)))
     for s, d in T["systems"].items():

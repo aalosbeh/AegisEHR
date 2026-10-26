@@ -44,6 +44,18 @@ def test_validator_catches_common_llm_errors():
     assert "invalid_datetime" in kinds and "unknown_element" in kinds
 
 
+def test_validator_survives_wrong_json_types():
+    # LLM drafts sometimes put objects or lists where a code string belongs; these must fail, not raise
+    b = copy.deepcopy(records(3)[0]["gold"])
+    res = [e["resource"] for e in b["entry"]]
+    next(x for x in res if x["resourceType"] == "Condition")["code"]["coding"][0]["code"] = {"text": "x"}
+    next(x for x in res if x["resourceType"] == "Patient")["gender"] = ["female"]
+    b["entry"].append({"fullUrl": "urn:uuid:1", "resource": {"resourceType": ["DetectedIssue"]}})
+    b["type"] = {"collection": True}
+    v = fhir.validate_bundle(b)
+    assert not v["valid"] and "value_set_binding" in v["by_kind"] and "bundle_structure" in v["by_kind"]
+
+
 def test_gold_scores_perfectly():
     for r in records(15):
         gs = [frozenset(s["components"]) for s in r["gold_signals"]]

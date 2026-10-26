@@ -302,7 +302,7 @@ def _cc(v, x, where, required_system=None, valueset=None, vs_kind="value_set_bin
     for i, c in enumerate(codings):
         _coding(v, c, f"{where}.coding[{i}]")
         if isinstance(c, dict) and (required_system is None or c.get("system") == required_system):
-            if found is None:
+            if found is None and isinstance(c.get("code"), str):
                 found = c.get("code")
     if valueset is not None:
         if found is None:
@@ -335,7 +335,7 @@ def _quantity(v, q, where, need_ucum=True):
     if "code" in q:
         if q.get("system") != UCUM:
             v.err("ucum_unit", f"{where}: coded unit without UCUM system")
-        elif q["code"] not in UCUM_OK:
+        elif not isinstance(q["code"], str) or q["code"] not in UCUM_OK:
             v.err("ucum_unit", f"{where}: unit {q['code']!r} is not a valid UCUM code here")
     elif need_ucum:
         v.err("ucum_unit", f"{where}: missing UCUM code")
@@ -346,10 +346,15 @@ def _dt(v, val, where):
         v.err("invalid_datetime", f"{where}={val!r}")
 
 
+def _in_vs(val, vs):
+    # FHIR codes are strings; any other JSON type (list, object, number) fails the binding instead of raising
+    return isinstance(val, str) and val in VS[vs]
+
+
 def _status(v, r, key, vs, where):
     if key not in r:
         v.err("missing_required", f"{where}.{key}")
-    elif r[key] not in VS[vs]:
+    elif not _in_vs(r[key], vs):
         v.err("value_set_binding", f"{where}.{key}={r[key]!r}")
 
 
@@ -365,7 +370,7 @@ def _resource(v: _V, r: Dict, ids: set, where: str):
             v.err("choice_conflict", f"{where}: more than one of {opts}")
 
     if rt == "Patient":
-        if "gender" in r and r["gender"] not in VS["gender"]:
+        if "gender" in r and not _in_vs(r["gender"], "gender"):
             v.err("value_set_binding", f"{where}.gender")
         if "birthDate" in r and (not valid_datetime(r["birthDate"]) or "T" in str(r["birthDate"])):
             v.err("invalid_datetime", f"{where}.birthDate")
@@ -441,7 +446,7 @@ def _resource(v: _V, r: Dict, ids: set, where: str):
                             v.err("datatype", f"{w}.timing.repeat.frequency")
                         if "period" in rep and (isinstance(rep["period"], bool) or not isinstance(rep["period"], (int, float)) or rep["period"] <= 0):
                             v.err("datatype", f"{w}.timing.repeat.period")
-                        if "periodUnit" in rep and rep["periodUnit"] not in VS["period_unit"]:
+                        if "periodUnit" in rep and not _in_vs(rep["periodUnit"], "period_unit"):
                             v.err("value_set_binding", f"{w}.timing.repeat.periodUnit={rep['periodUnit']!r}")
                         if ("period" in rep) != ("periodUnit" in rep):
                             v.err("missing_required", f"{w}.timing.repeat period/periodUnit (tim-1)")
@@ -484,7 +489,7 @@ def _resource(v: _V, r: Dict, ids: set, where: str):
                 else:
                     for j, m in enumerate(man):
                         _cc(v, m, f"{w}.manifestation[{j}]")
-                if "severity" in x and x["severity"] not in VS["severity"]:
+                if "severity" in x and not _in_vs(x["severity"], "severity"):
                     v.err("value_set_binding", f"{w}.severity={x['severity']!r}")
     elif rt == "Observation":
         _status(v, r, "status", "obs_status", where)
@@ -500,7 +505,7 @@ def _resource(v: _V, r: Dict, ids: set, where: str):
             _quantity(v, r["valueQuantity"], f"{where}.valueQuantity")
     elif rt == "DetectedIssue":
         _status(v, r, "status", "di_status", where)
-        if "severity" in r and r["severity"] not in VS["di_severity"]:
+        if "severity" in r and not _in_vs(r["severity"], "di_severity"):
             v.err("value_set_binding", f"{where}.severity")
         if "patient" in r:
             _reference(v, r["patient"], f"{where}.patient", {"Patient"}, ids)
@@ -523,7 +528,7 @@ def validate_bundle(b) -> Dict:
         v.err("bundle_structure", "top-level object is not a Bundle")
         return _result(v, 0)
     _check_keys(v, b, DT_KEYS["Bundle"], "Bundle")
-    if b.get("type") not in VS["bundle_type"]:
+    if not _in_vs(b.get("type"), "bundle_type"):
         v.err("bundle_structure", f"Bundle.type={b.get('type')!r}")
     entries = b.get("entry")
     if not isinstance(entries, list) or not entries:
@@ -548,7 +553,7 @@ def validate_bundle(b) -> Dict:
             v.err("bundle_structure", f"{w}.resource missing")
             continue
         rt = r.get("resourceType")
-        if rt not in SUPPORTED:
+        if not isinstance(rt, str) or rt not in SUPPORTED:
             v.err("bundle_structure", f"{w}: unsupported resourceType {rt!r}")
             continue
         n_pat += rt == "Patient"

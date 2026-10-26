@@ -97,8 +97,8 @@ def fig_risk_coverage():
     names = {"qwen2.5-7b_direct": ("Qwen2.5-7B direct", GREY[0], "--"),
              "qwen2.5-7b_validator": ("Qwen2.5-7B + validator", GREY[1], "-."),
              "qwen2.5-7b_reflect": ("Qwen2.5-7B + reflection", GREY[2], ":"),
-             "qwen2.5-7b_aegis": ("Aegis-EHR on Qwen2.5-7B drafts", GREEN[1], "-"),
-             "det_aegis": ("Aegis-EHR (deterministic)", GREEN[0], "-")}
+             "qwen2.5-7b_aegis": ("Aegis-EHR on Qwen2.5-7B drafts", GREEN[3], "-"),
+             "det_aegis": ("Aegis-EHR (deterministic)", GREEN[0], (0, (5, 2)))}
     for k, (lab, c, ls) in names.items():
         if k in B:
             v = B[k]
@@ -106,7 +106,7 @@ def fig_risk_coverage():
     axs[1].set_title("(b) Part B, LLM subset (n = 150)", fontsize=10)
     axs[1].set_xlabel("Coverage")
     axs[1].set_ylim(0, 1)
-    axs[1].legend(fontsize=7.5, loc="upper left")
+    axs[1].legend(fontsize=7.5, loc="center left")
     save(fig, "fig2_risk_coverage")
 
 
@@ -136,7 +136,7 @@ def fig_reliability():
         if key in B and B[key]["bins"]:
             x, y, n = zip(*B[key]["bins"])
             axs[1].plot(x, y, marker=mk, color=c, lw=1.2, ms=4, label=lab)
-    axs[1].legend(fontsize=7.5, loc="upper left")
+    axs[1].legend(fontsize=7.5, loc="center left")
     axs[1].set_title("(b) Part B, cross-fitted calibration", fontsize=10)
     save(fig, "fig3_reliability")
 

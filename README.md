@@ -68,7 +68,8 @@ python scripts/08_figures.py                          # figures/*.png
 ```
 
 The raw LLM outputs used in the paper are included in `results/llm/`, so `06_analyze_partB.py` can be run without
-repeating generation. Model digests, decoding options and dates are stored in `results/llm/*.meta.json`.
+repeating generation. A model enters the analysis only when its direct run covers the whole subset; partial runs are
+reported and skipped. Model digests, decoding options and dates are stored in `results/llm/*.meta.json`.
 
 ## Design notes
 
