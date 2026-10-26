@@ -1,0 +1,44 @@
+{
+  "Site-A": {
+    "records": 47400,
+    "abbr_mentions": 161852,
+    "mentions": 809552,
+    "tokens": 6648730,
+    "temporal_vague": 22174,
+    "conflict": 4841,
+    "signal_records": 13165,
+    "allergy": 7284,
+    "meds": 44970,
+    "high_complexity": 12178,
+    "typo": 14402,
+    "site_forms": 4431
+  },
+  "Site-B": {
+    "records": 39960,
+    "abbr_mentions": 239752,
+    "mentions": 696161,
+    "tokens": 4190989,
+    "temporal_vague": 21885,
+    "conflict": 6395,
+    "signal_records": 12363,
+    "allergy": 5883,
+    "meds": 38158,
+    "high_complexity": 12050,
+    "typo": 24332,
+    "site_forms": 75990
+  },
+  "Site-C": {
+    "records": 32640,
+    "abbr_mentions": 64129,
+    "mentions": 571715,
+    "tokens": 4025906,
+    "temporal_vague": 12828,
+    "conflict": 2237,
+    "signal_records": 9121,
+    "allergy": 4376,
+    "meds": 31171,
+    "high_complexity": 8552,
+    "typo": 41583,
+    "site_forms": 106344
+  }
+}

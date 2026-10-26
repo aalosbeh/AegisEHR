@@ -1,16 +1,7 @@
-# Aegis-EHR research code dependencies
-# Pinned versions for reproducibility
-torch==2.3.0
-transformers==4.40.0
-numpy==1.26.4
-scipy==1.13.0
-pandas==2.2.2
-matplotlib==3.8.4
-seaborn==0.13.2
-scikit-learn==1.4.2
-tqdm==4.66.2
-gradio==4.31.0
-
-# LangGraph 0.0.47 is optional (heavy dep).
-# The code falls back to a minimal in-process orchestrator if LangGraph is not present.
-# langgraph==0.0.47
+# Aegis-EHR v2 reference implementation (versions used for the paper)
+numpy==2.5.4
+scipy==1.18.1
+scikit-learn==1.9.1
+matplotlib==3.11.2
+requests==2.34.2        # LLM harness only (talks to a local Ollama server)
+pytest>=8               # tests only

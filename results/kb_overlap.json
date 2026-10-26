@@ -1,0 +1,34 @@
+{
+ "default": {
+  "reference_alert_rules": 74,
+  "operational_rules": 58,
+  "shared": 53,
+  "reference_coverage": 0.7162162162162162,
+  "extra_rules": 5,
+  "jaccard": 0.6708860759493671
+ },
+ "cov100": {
+  "reference_alert_rules": 74,
+  "operational_rules": 74,
+  "shared": 74,
+  "reference_coverage": 1.0,
+  "extra_rules": 0,
+  "jaccard": 1.0
+ },
+ "cov70": {
+  "reference_alert_rules": 74,
+  "operational_rules": 57,
+  "shared": 52,
+  "reference_coverage": 0.7027027027027027,
+  "extra_rules": 5,
+  "jaccard": 0.6582278481012658
+ },
+ "cov50": {
+  "reference_alert_rules": 74,
+  "operational_rules": 42,
+  "shared": 37,
+  "reference_coverage": 0.5,
+  "extra_rules": 5,
+  "jaccard": 0.46835443037974683
+ }
+}

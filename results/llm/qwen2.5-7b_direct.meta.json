@@ -1,0 +1,35 @@
+{
+  "model": {
+    "model": "qwen2.5:7b",
+    "digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "qwen2",
+      "families": [
+        "qwen2"
+      ],
+      "parameter_size": "7.6B",
+      "quantization_level": "Q4_K_M"
+    },
+    "modified_at": "2026-10-21T17:04:17.898803965-06:00"
+  },
+  "variant": "direct",
+  "started": "2026-10-25T15:50:19.226448",
+  "prompt_sha256": "626ebc41f28a6cc5dbb75a28f74448d38c0b957cb92471b48415bbfd9066cc28",
+  "few_shot_ids": [
+    "A-003261",
+    "B-000011"
+  ],
+  "options": {
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 10240,
+    "num_predict": 3000,
+    "top_p": 1.0,
+    "format": "json"
+  },
+  "retry_policy": "validator: up to 2 retries with the first 15 validator errors; reflect: 1 critique + 1 revision",
+  "n_records": 150,
+  "finished": "2026-10-25T19:50:58.771249"
+}

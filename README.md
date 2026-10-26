@@ -1,66 +1,87 @@
-# Aegis-EHR 
-Author: **Anas AlSobeh, Utah Valley University**, with Amani Shatnawi and
-Rafat Hammad, 2026.
+# Aegis-EHR (v2)
 
-This package reproduces the figures and headline tables from the paper
-*Aegis-EHR: A Decentralized Agentic Mesh for Autonomous Clinical
-Reconciliation and Interoperability*. 
+Reference implementation, benchmark generator and experiment scripts for
 
----
+> R. Hammad, A. Alsobeh and A. Shatnawi. *Aegis-EHR: An Orchestrated Multi-Agent Framework for Calibrated,
+> Provenance-Preserving Clinical Reconciliation and FHIR Interoperability.* Revised manuscript submitted to the
+> International Journal of Advances in Soft Computing and its Applications (IJASCA), 2026.
 
-## Quickstart
+Every number, table and figure in the revised paper is produced by the scripts in this repository from seeded runs.
+
+## Important note about version 1
+
+The first version of this repository (commit `90590d2` and earlier) did not reproduce the results of the original
+submission: its `evaluate.py` wrote fixed values copied from the draft and labelled them `[SIMULATED]`, and the figure
+script drew hand-specified curves. Those files have been removed. The revised paper withdraws the original results and
+reports only results produced by the code below. The old files remain available in the git history.
+
+## What is here
+
+| Path | Content |
+|------|---------|
+| `aegis/terminology.py` | Concept inventory (SNOMED CT, ICD-10-CM, RxNorm, LOINC, UCUM) with base, profile-specific and rare surface forms |
+| `aegis/knowledge.py` | Reference knowledge base (labels only) and the derived operational knowledge base used by systems |
+| `aegis/synth.py` | Benchmark generator: latent state, then gold FHIR bundle and gold safety signals, then note text |
+| `aegis/fhir.py` | FHIR R4 builders and a strict validator (12 check types) |
+| `aegis/nlp.py` | Sectioning, lexicon, typo-tolerant matching, assertion detection, temporal and dose parsing, vocabulary learning |
+| `aegis/agents.py` | Schema, Reasoning, Temporal, Pharmacovigilance and Governance agents, orchestrator, baselines |
+| `aegis/axioms.py` | Eleven temporal axioms (T1-T7 used by the agent, T8-T11 held out) |
+| `aegis/calibration.py` | Per-agent Platt calibration, six joint-confidence aggregators (noisy-AND default), decision rule |
+| `aegis/metrics.py` | CF-F1, SPI, hallucination rate, temporal fidelity, UTR, TCR, FHIR validity, PV metrics, MedBLEU, acceptability |
+| `aegis/stats.py` | Bootstrap, paired permutation, McNemar, Holm, effect sizes, ECE, risk-coverage |
+| `aegis/llm.py` | Local LLM systems through Ollama (direct, validator loop, reflection loop) |
+| `scripts/` | Numbered experiment pipeline (see below) |
+| `results/tables/` | All result tables used in the paper (JSON) |
+| `results/llm/` | Raw LLM outputs with token counts, latency and log-probabilities, plus run metadata |
+| `figures/` | Figures 1-7 of the paper |
+| `data/sample/` | 30 test records for a quick look and for the tests |
+| `tests/` | Unit and smoke tests |
+
+## Reproducing the paper
+
+Python 3.11 or later. Part A runs on CPU only.
 
 ```bash
-pip install -r code/requirements.txt
-python data/generate_data.py --n 2000 --seed 42
-python code/train.py --max_steps 100
-python code/evaluate.py
-python code/generate_figures.py
-python code/gui.py            # opens http://localhost:7860
+pip install -r requirements.txt
+python -m pytest -q                                   # sanity checks (seconds)
+python scripts/01_generate_corpus.py --total 120000 --seed 42   # benchmark, about 1.4 GB, under a minute
+PY=python W=12 ./scripts/run_partA_all.sh             # Part A, leave-one-profile-out, analysis, drift, noise
 ```
 
-All commands are run from the **project root** (`research_sprint_aegis_ehr/`).
-Paths inside the code resolve through `pathlib.Path(__file__).resolve().parents[1]`
-so they work no matter where they are invoked from.
+`run_partA_all.sh` runs, in order:
 
----
+1. `scripts/02_run_partA.py` - learns profile vocabulary and headers from training notes, runs the rule-based
+   converter, the single-pass pipeline, Aegis-EHR and its ablations on all validation and test notes;
+2. the same script with `--holdout Site-A|Site-B|Site-C` - leave-one-profile-out runs;
+3. `scripts/04_analyze_partA.py` - calibration, abstention-aware comparison, ablations, aggregators, temporal repair,
+   knowledge-base sensitivity, subgroups, failures, MedBLEU validity and statistics (`results/tables/partA.json`);
+4. `scripts/05_drift.py` - 1,080 drift streams and 100 controls (`results/tables/drift.json`);
+5. `scripts/07_noise_pairwise_latency.py` - token corruption, pairwise ablations and latency.
 
-## What each step produces
+Part B needs a local [Ollama](https://ollama.com) server with `qwen2.5:7b`, `llama3.2:3b` and `gemma3:12b`:
 
-| Step | Command | Outputs | Notes |
-|------|---------|---------|-------|
-| 1. Install | `pip install -r code/requirements.txt` | Python environment | LangGraph is optional; we fall back to a minimal orchestrator. |
-| 2. Generate data | `python data/generate_data.py --n 2000 --seed 42` | `data/synthetic_corpus.jsonl`, `data/site_stats.csv` | 40/33/27 site split, abbrev densities N(14.3,6.2)/N(18.7,8.9)/N(9.8,4.1). |
-| 3. Train | `python code/train.py --max_steps 100` | `results/checkpoint.pt`, `results/train_log.csv`, `results/hparams.json` | Smoke test < 60s on CPU; multi-task loss across 5 heads. |
-| 4. Evaluate | `python code/evaluate.py` | `results/main_results.csv`, `results/calibration.csv`, `results/loso.csv`, `results/evaluate_audit.json` | All headline numbers tagged [SIMULATED]. |
-| 5. Figures | `python code/generate_figures.py` | `figures/*.png`, `figures/*.pdf`, `screenshots/*.png` | Fig. 1 architecture + Fig. 2-7 from the paper. |
-| 6. GUI | `python code/gui.py` | Web demo at http://localhost:7860 | Green theme, footer "Anas Alsobeh, Utah Valley University". |
+```bash
+ollama serve &                                        # OLLAMA_NUM_PARALLEL=1 was used for the paper
+PY=python ./scripts/run_llm_all.sh                    # several hours on an Apple M4 Max; resumable
+python scripts/06_analyze_partB.py                    # results/tables/partB.json
+python scripts/08_figures.py                          # figures/*.png
+```
 
----
+The raw LLM outputs used in the paper are included in `results/llm/`, so `06_analyze_partB.py` can be run without
+repeating generation. Model digests, decoding options and dates are stored in `results/llm/*.meta.json`.
 
-## Architecture notes
+## Design notes
 
-- `code/model.py` -- `AegisMiniMesh` with five heads (`SchemaHead`,
-  `ReasoningHead`, `TemporalHead`, `PharmaHead`, `GovernanceHead`) on a
-  shared DistilBERT backbone (~66M params). Falls back to a tiny
-  `MiniBERT` (random init) when offline.
-- `code/dataset.py` -- `AegisSyntheticDataset` with per-record FHIR
-  bundle, temporal axioms, pharma alerts, and a leave-one-site-out
-  switch.
-- `code/train.py` -- AdamW, BCE + MSE multi-task loss, optional
-  `--site_holdout`.
-- `code/evaluate.py` -- writes the paper's Table 1 / calibration /
-  LOSO numbers, plus an audit JSON recording the raw checkpoint signal.
-- `code/generate_figures.py` -- pure matplotlib; green palette
-  `#2E8B57 / #4CAF50 / #A5D6A7 / #1B5E20`.
-- `code/gui.py` -- Gradio app with green theme and footer attribution.
+* **Label independence.** The generator samples a latent clinical state, chooses how each fact is expressed, builds
+  the gold bundle and gold signals, and only then writes the text. Gold signals come from `reference_kb()`, which no
+  system reads; systems use `operational_kb()`.
+* **Provenance-preserving temporal repair.** Timestamps are set only to values stated in, or derived by date
+  arithmetic from, the note. Vague wording is kept as `onsetString`; conflicting supported values are kept and flagged.
+  The earlier closest-valid policy is available as `MeshConfig(temporal_policy="closest_valid")` for comparison.
+* **Grounding of external drafts.** Facts in an LLM draft that cannot be matched to any span of the note are dropped.
+* **Weakest-link aggregation.** The joint confidence is a weighted noisy-AND of calibrated agent probabilities.
 
----
+## Limitations
 
-## Reproducibility
-
-- All random state is seeded (`numpy`, `torch`, `random`).
-- The checkpoint, log, and hparams are written together so each run is
-  fully described by `results/hparams.json`.
-- No external network calls are issued by any script; no real PHI is
-  read or generated.
+All data are synthetic, the generator and the parser share a terminology and documentation grammar, the knowledge
+bases were written by the authors, and no clinician evaluation has been performed. See Section 7.1 of the paper.

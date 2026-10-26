@@ -1,0 +1,35 @@
+{
+  "model": {
+    "model": "llama3.2:3b",
+    "digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "llama",
+      "families": [
+        "llama"
+      ],
+      "parameter_size": "3.2B",
+      "quantization_level": "Q4_K_M"
+    },
+    "modified_at": "2026-10-21T17:03:29.053044151-06:00"
+  },
+  "variant": "direct",
+  "started": "2026-10-25T19:51:01.252302",
+  "prompt_sha256": "626ebc41f28a6cc5dbb75a28f74448d38c0b957cb92471b48415bbfd9066cc28",
+  "few_shot_ids": [
+    "A-003261",
+    "B-000011"
+  ],
+  "options": {
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 10240,
+    "num_predict": 3000,
+    "top_p": 1.0,
+    "format": "json"
+  },
+  "retry_policy": "validator: up to 2 retries with the first 15 validator errors; reflect: 1 critique + 1 revision",
+  "n_records": 150,
+  "finished": "2026-10-25T20:35:32.984761"
+}
