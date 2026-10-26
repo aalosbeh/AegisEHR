@@ -182,7 +182,13 @@ def main():
                                  mean_wall_s=float(np.mean([runs[tag][i]["wall"] for i in common])),
                                  median_wall_s=float(np.median([runs[tag][i]["wall"] for i in common])),
                                  tokens_per_s=float(np.sum([runs[tag][i]["output_tokens"] for i in common]) /
-                                                    np.sum([runs[tag][i]["wall"] for i in common])))
+                                                    np.sum([runs[tag][i]["wall"] for i in common])),
+                                 unparsed_length_cutoff=sum(runs[tag][i].get("bundle") is None and
+                                                            runs[tag][i].get("done_reason") == "length" for i in common),
+                                 unparsed_whitespace_runaway=sum(runs[tag][i].get("bundle") is None and
+                                                                 len(runs[tag][i].get("raw") or "") -
+                                                                 len((runs[tag][i].get("raw") or "").rstrip()) >= 20
+                                                                 for i in common))
         # Aegis-EHR on this model's drafts --------------------------------------------
         for an, cfg in ABL.items():
             sname = f"{m}_aegis" if an == "aegis" else f"{m}_aegis_{an}"
@@ -191,7 +197,11 @@ def main():
                 d = runs[f"{m}_direct"][i]
                 rec = recs[i]
                 F = parse_note(rec["text"], lex, "full", headers)
-                o = mesh.run(rec["text"], cfg, draft=d.get("bundle"), F=F)
+                if d.get("bundle") is None:
+                    # unparsable LLM output: the gate withholds it; no silent fallback to Aegis-EHR's own parser
+                    o = dict(bundle=None, alerts=[], reports={}, pre_valid=False, post_valid=False)
+                else:
+                    o = mesh.run(rec["text"], cfg, draft=d["bundle"], F=F)
                 if o["bundle"] is None:
                     e = evaluate_record(rec, {"resourceType": "Bundle", "type": "collection", "entry": []}, [],
                                         {"valid": False, "errors": [], "by_kind": {}})

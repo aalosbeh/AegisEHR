@@ -1,0 +1,36 @@
+{
+  "model": {
+    "model": "gemma3:12b",
+    "digest": "b92b218582c521ba287f38f1d6057dcd3c6cbff036f13cac97b5d861f5e58ec3",
+    "details": {
+      "parent_model": "dhiltgen/gemma3:12b-it-q4_K_M-llamacpp",
+      "format": "gguf",
+      "family": "gemma3",
+      "families": [
+        "gemma3",
+        "clip"
+      ],
+      "parameter_size": "11.8B",
+      "quantization_level": "Q4_K_M"
+    },
+    "modified_at": "2026-10-21T17:05:41.51015847-06:00"
+  },
+  "variant": "direct",
+  "started": "2026-10-26T00:50:48.873176",
+  "prompt_sha256": "626ebc41f28a6cc5dbb75a28f74448d38c0b957cb92471b48415bbfd9066cc28",
+  "few_shot_ids": [
+    "A-003261",
+    "B-000011"
+  ],
+  "options": {
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 10240,
+    "num_predict": 3000,
+    "top_p": 1.0,
+    "format": "json"
+  },
+  "retry_policy": "validator: up to 2 retries with the first 15 validator errors; reflect: 1 critique + 1 revision",
+  "n_records": 150,
+  "finished": "2026-10-26T03:44:26.831711"
+}
