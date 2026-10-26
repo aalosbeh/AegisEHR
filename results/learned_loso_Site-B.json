@@ -1,0 +1,2858 @@
+{
+ "vocab": [
+  [
+   "acid",
+   "condition",
+   "gerd",
+   1.0
+  ],
+  [
+   "acid rfelux",
+   "condition",
+   "gerd",
+   1.0
+  ],
+  [
+   "adult onset",
+   "condition",
+   "t2dm",
+   0.763
+  ],
+  [
+   "adult onset diabetes",
+   "condition",
+   "t2dm",
+   0.761
+  ],
+  [
+   "airflow",
+   "condition",
+   "copd",
+   0.912
+  ],
+  [
+   "airflow obstruction",
+   "condition",
+   "copd",
+   0.912
+  ],
+  [
+   "airway",
+   "condition",
+   "asthma",
+   1.0
+  ],
+  [
+   "airway disease",
+   "condition",
+   "asthma",
+   1.0
+  ],
+  [
+   "allergic to pen",
+   "allergen",
+   "penicillin",
+   1.0
+  ],
+  [
+   "allergic to pen -",
+   "allergen",
+   "penicillin",
+   1.0
+  ],
+  [
+   "apirin",
+   "drug",
+   "aspirin",
+   0.882
+  ],
+  [
+   "apsirin",
+   "drug",
+   "aspirin",
+   1.0
+  ],
+  [
+   "arthritis",
+   "condition",
+   "oa",
+   0.944
+  ],
+  [
+   "arthritis in knees",
+   "condition",
+   "oa",
+   1.0
+  ],
+  [
+   "asiprin",
+   "drug",
+   "aspirin",
+   0.893
+  ],
+  [
+   "asirin",
+   "drug",
+   "aspirin",
+   0.926
+  ],
+  [
+   "aspiin",
+   "drug",
+   "aspirin",
+   0.9
+  ],
+  [
+   "aspiirin",
+   "drug",
+   "aspirin",
+   0.96
+  ],
+  [
+   "aspiirn",
+   "drug",
+   "aspirin",
+   0.971
+  ],
+  [
+   "aspiriin",
+   "drug",
+   "aspirin",
+   0.889
+  ],
+  [
+   "aspirn",
+   "drug",
+   "aspirin",
+   0.9
+  ],
+  [
+   "aspirni",
+   "drug",
+   "aspirin",
+   0.933
+  ],
+  [
+   "aspirrin",
+   "drug",
+   "aspirin",
+   1.0
+  ],
+  [
+   "asppirin",
+   "drug",
+   "aspirin",
+   1.0
+  ],
+  [
+   "aspriin",
+   "drug",
+   "aspirin",
+   0.912
+  ],
+  [
+   "asprin",
+   "drug",
+   "aspirin",
+   0.875
+  ],
+  [
+   "asspirin",
+   "drug",
+   "aspirin",
+   0.913
+  ],
+  [
+   "atrial",
+   "condition",
+   "afib",
+   1.0
+  ],
+  [
+   "atrial fbirillation",
+   "condition",
+   "afib",
+   1.0
+  ],
+  [
+   "atrial fbrillation",
+   "condition",
+   "afib",
+   1.0
+  ],
+  [
+   "atrial fibillation",
+   "condition",
+   "afib",
+   1.0
+  ],
+  [
+   "atrial fibriillation",
+   "condition",
+   "afib",
+   1.0
+  ],
+  [
+   "atrial fibrilaltion",
+   "condition",
+   "afib",
+   1.0
+  ],
+  [
+   "atrial fibrilation",
+   "condition",
+   "afib",
+   1.0
+  ],
+  [
+   "atrial fibrillaiton",
+   "condition",
+   "afib",
+   1.0
+  ],
+  [
+   "atrial fibrillatino",
+   "condition",
+   "afib",
+   1.0
+  ],
+  [
+   "atrial fibrillatoin",
+   "condition",
+   "afib",
+   1.0
+  ],
+  [
+   "atrial fibrillaton",
+   "condition",
+   "afib",
+   1.0
+  ],
+  [
+   "atrial fibrillattion",
+   "condition",
+   "afib",
+   1.0
+  ],
+  [
+   "atrial fibrilllation",
+   "condition",
+   "afib",
+   1.0
+  ],
+  [
+   "atrial fibrilltaion",
+   "condition",
+   "afib",
+   1.0
+  ],
+  [
+   "atrial fibrlilation",
+   "condition",
+   "afib",
+   1.0
+  ],
+  [
+   "atrial fibrrillation",
+   "condition",
+   "afib",
+   1.0
+  ],
+  [
+   "atrial firbillation",
+   "condition",
+   "afib",
+   1.0
+  ],
+  [
+   "atrial firillation",
+   "condition",
+   "afib",
+   1.0
+  ],
+  [
+   "auricular",
+   "condition",
+   "afib",
+   1.0
+  ],
+  [
+   "auricular fibrillation",
+   "condition",
+   "afib",
+   1.0
+  ],
+  [
+   "baby asiprin",
+   "drug",
+   "aspirin",
+   1.0
+  ],
+  [
+   "baby aspiin",
+   "drug",
+   "aspirin",
+   1.0
+  ],
+  [
+   "baby aspiirin",
+   "drug",
+   "aspirin",
+   1.0
+  ],
+  [
+   "baby aspiirn",
+   "drug",
+   "aspirin",
+   1.0
+  ],
+  [
+   "baby aspirn",
+   "drug",
+   "aspirin",
+   1.0
+  ],
+  [
+   "baby aspirni",
+   "drug",
+   "aspirin",
+   1.0
+  ],
+  [
+   "baby aspirrin",
+   "drug",
+   "aspirin",
+   1.0
+  ],
+  [
+   "baby aspriin",
+   "drug",
+   "aspirin",
+   1.0
+  ],
+  [
+   "bad headaches",
+   "condition",
+   "migraine",
+   1.0
+  ],
+  [
+   "bad lungs from smkoing",
+   "condition",
+   "copd",
+   0.929
+  ],
+  [
+   "bad lungs from smokig",
+   "condition",
+   "copd",
+   1.0
+  ],
+  [
+   "bad lungs from smokign",
+   "condition",
+   "copd",
+   0.917
+  ],
+  [
+   "bad lungs from smokiing",
+   "condition",
+   "copd",
+   1.0
+  ],
+  [
+   "bad lungs from smoking",
+   "condition",
+   "copd",
+   0.912
+  ],
+  [
+   "bad lungs from smokng",
+   "condition",
+   "copd",
+   1.0
+  ],
+  [
+   "bad lungs from smoknig",
+   "condition",
+   "copd",
+   1.0
+  ],
+  [
+   "bad lungs from smooking",
+   "condition",
+   "copd",
+   1.0
+  ],
+  [
+   "bad lungs from soking",
+   "condition",
+   "copd",
+   1.0
+  ],
+  [
+   "bad lungs from somking",
+   "condition",
+   "copd",
+   0.9
+  ],
+  [
+   "benign",
+   "condition",
+   "bph",
+   1.0
+  ],
+  [
+   "benign prostatic",
+   "condition",
+   "bph",
+   1.0
+  ],
+  [
+   "blood perssure",
+   "condition",
+   "htn",
+   0.889
+  ],
+  [
+   "blood pessure",
+   "condition",
+   "htn",
+   0.875
+  ],
+  [
+   "blood pressre",
+   "condition",
+   "htn",
+   1.0
+  ],
+  [
+   "blood pressrue",
+   "condition",
+   "htn",
+   1.0
+  ],
+  [
+   "blood presssure",
+   "condition",
+   "htn",
+   1.0
+  ],
+  [
+   "blood pressue",
+   "condition",
+   "htn",
+   1.0
+  ],
+  [
+   "blood pressuer",
+   "condition",
+   "htn",
+   1.0
+  ],
+  [
+   "blood pressure",
+   "condition",
+   "htn",
+   0.871
+  ],
+  [
+   "blood presure",
+   "condition",
+   "htn",
+   0.8
+  ],
+  [
+   "blood presusre",
+   "condition",
+   "htn",
+   0.9
+  ],
+  [
+   "blood prressure",
+   "condition",
+   "htn",
+   1.0
+  ],
+  [
+   "blood prsesure",
+   "condition",
+   "htn",
+   0.917
+  ],
+  [
+   "blood prssure",
+   "condition",
+   "htn",
+   0.889
+  ],
+  [
+   "blood thinenr",
+   "drug",
+   "warfarin",
+   1.0
+  ],
+  [
+   "blood thinenr pill",
+   "drug",
+   "warfarin",
+   1.0
+  ],
+  [
+   "blood thiner",
+   "drug",
+   "warfarin",
+   1.0
+  ],
+  [
+   "blood thiner pill",
+   "drug",
+   "warfarin",
+   1.0
+  ],
+  [
+   "blood thinner",
+   "drug",
+   "warfarin",
+   1.0
+  ],
+  [
+   "blood thinner pill",
+   "drug",
+   "warfarin",
+   1.0
+  ],
+  [
+   "blood thinnr",
+   "drug",
+   "warfarin",
+   1.0
+  ],
+  [
+   "blood thinnr pill",
+   "drug",
+   "warfarin",
+   1.0
+  ],
+  [
+   "bones",
+   "condition",
+   "osteoporosis",
+   1.0
+  ],
+  [
+   "bradycardai",
+   "condition",
+   "bradycardia",
+   1.0
+  ],
+  [
+   "cardiac",
+   "condition",
+   "hf",
+   1.0
+  ],
+  [
+   "cardiac decompensation",
+   "condition",
+   "hf",
+   1.0
+  ],
+  [
+   "ceatinine",
+   "lab",
+   "creatinine",
+   1.0
+  ],
+  [
+   "celllitis",
+   "condition",
+   "cellulitis",
+   1.0
+  ],
+  [
+   "cellluitis",
+   "condition",
+   "cellulitis",
+   1.0
+  ],
+  [
+   "celluliits",
+   "condition",
+   "cellulitis",
+   1.0
+  ],
+  [
+   "celulitis",
+   "condition",
+   "cellulitis",
+   1.0
+  ],
+  [
+   "ceratinine",
+   "lab",
+   "creatinine",
+   1.0
+  ],
+  [
+   "chloride",
+   "drug",
+   "potassium_chloride",
+   1.0
+  ],
+  [
+   "cholesterol problem",
+   "condition",
+   "hld",
+   0.757
+  ],
+  [
+   "cholestreol problem",
+   "condition",
+   "hld",
+   0.769
+  ],
+  [
+   "chonic kidney",
+   "condition",
+   "ckd",
+   0.833
+  ],
+  [
+   "chonic kidney disease",
+   "condition",
+   "ckd",
+   0.833
+  ],
+  [
+   "chronc kidney",
+   "condition",
+   "ckd",
+   1.0
+  ],
+  [
+   "chronc kidney disease",
+   "condition",
+   "ckd",
+   1.0
+  ],
+  [
+   "chronic airflow",
+   "condition",
+   "copd",
+   0.912
+  ],
+  [
+   "chronic airflow obstruction",
+   "condition",
+   "copd",
+   0.912
+  ],
+  [
+   "chronic nephropathy",
+   "condition",
+   "ckd",
+   0.88
+  ],
+  [
+   "chronic obsructive",
+   "condition",
+   "copd",
+   1.0
+  ],
+  [
+   "chronic obsructive pulmonary",
+   "condition",
+   "copd",
+   1.0
+  ],
+  [
+   "chronic obsructive pulmonary disease",
+   "condition",
+   "copd",
+   1.0
+  ],
+  [
+   "chronic obstrctive",
+   "condition",
+   "copd",
+   0.909
+  ],
+  [
+   "chronic obstrcutive",
+   "condition",
+   "copd",
+   0.8
+  ],
+  [
+   "chronic obstrucitve",
+   "condition",
+   "copd",
+   0.889
+  ],
+  [
+   "chronic obstrucive",
+   "condition",
+   "copd",
+   0.95
+  ],
+  [
+   "chronic obstrucive pulmonary",
+   "condition",
+   "copd",
+   0.944
+  ],
+  [
+   "chronic obstrucive pulmonary disease",
+   "condition",
+   "copd",
+   0.944
+  ],
+  [
+   "chronic obstructiev",
+   "condition",
+   "copd",
+   1.0
+  ],
+  [
+   "chronic obstructve",
+   "condition",
+   "copd",
+   1.0
+  ],
+  [
+   "chronic obstructve pulmonary",
+   "condition",
+   "copd",
+   1.0
+  ],
+  [
+   "chronic obstructve pulmonary disease",
+   "condition",
+   "copd",
+   1.0
+  ],
+  [
+   "chronic obstructvie",
+   "condition",
+   "copd",
+   0.944
+  ],
+  [
+   "chronic obstructvie pulmonary",
+   "condition",
+   "copd",
+   0.933
+  ],
+  [
+   "chronic obstructvie pulmonary disease",
+   "condition",
+   "copd",
+   0.933
+  ],
+  [
+   "chronic obsttructive",
+   "condition",
+   "copd",
+   1.0
+  ],
+  [
+   "chronic obsturctive",
+   "condition",
+   "copd",
+   0.933
+  ],
+  [
+   "chronic obsturctive pulmonary",
+   "condition",
+   "copd",
+   0.923
+  ],
+  [
+   "chronic obsturctive pulmonary disease",
+   "condition",
+   "copd",
+   0.923
+  ],
+  [
+   "chronic obtructive",
+   "condition",
+   "copd",
+   0.846
+  ],
+  [
+   "chronic obtructive pulmonary",
+   "condition",
+   "copd",
+   0.846
+  ],
+  [
+   "chronic obtructive pulmonary disease",
+   "condition",
+   "copd",
+   0.846
+  ],
+  [
+   "chronic obtsructive",
+   "condition",
+   "copd",
+   0.812
+  ],
+  [
+   "chronic obtsructive pulmonary",
+   "condition",
+   "copd",
+   0.923
+  ],
+  [
+   "chronic obtsructive pulmonary disease",
+   "condition",
+   "copd",
+   0.923
+  ],
+  [
+   "chronic osbtructive",
+   "condition",
+   "copd",
+   1.0
+  ],
+  [
+   "chronic ostructive",
+   "condition",
+   "copd",
+   0.727
+  ],
+  [
+   "chronic renal",
+   "condition",
+   "ckd",
+   0.883
+  ],
+  [
+   "chroniic kidney",
+   "condition",
+   "ckd",
+   0.9
+  ],
+  [
+   "chroniic kidney disease",
+   "condition",
+   "ckd",
+   0.9
+  ],
+  [
+   "cllulitis",
+   "condition",
+   "cellulitis",
+   1.0
+  ],
+  [
+   "coornary artery",
+   "condition",
+   "cad",
+   0.786
+  ],
+  [
+   "coornary artery disease",
+   "condition",
+   "cad",
+   0.786
+  ],
+  [
+   "coroanry artery",
+   "condition",
+   "cad",
+   0.727
+  ],
+  [
+   "coroanry artery disease",
+   "condition",
+   "cad",
+   0.727
+  ],
+  [
+   "coronray artery",
+   "condition",
+   "cad",
+   0.75
+  ],
+  [
+   "coronray artery disease",
+   "condition",
+   "cad",
+   0.75
+  ],
+  [
+   "craetinine",
+   "lab",
+   "creatinine",
+   1.0
+  ],
+  [
+   "cratinine",
+   "lab",
+   "creatinine",
+   1.0
+  ],
+  [
+   "creainine",
+   "lab",
+   "creatinine",
+   1.0
+  ],
+  [
+   "creaitnine",
+   "lab",
+   "creatinine",
+   1.0
+  ],
+  [
+   "creatiine",
+   "lab",
+   "creatinine",
+   1.0
+  ],
+  [
+   "creatiinine",
+   "lab",
+   "creatinine",
+   1.0
+  ],
+  [
+   "creatiinne",
+   "lab",
+   "creatinine",
+   1.0
+  ],
+  [
+   "creatinie",
+   "lab",
+   "creatinine",
+   1.0
+  ],
+  [
+   "creatinien",
+   "lab",
+   "creatinine",
+   1.0
+  ],
+  [
+   "creatiniine",
+   "lab",
+   "creatinine",
+   1.0
+  ],
+  [
+   "creatininne",
+   "lab",
+   "creatinine",
+   1.0
+  ],
+  [
+   "creatinne",
+   "lab",
+   "creatinine",
+   1.0
+  ],
+  [
+   "creatinnie",
+   "lab",
+   "creatinine",
+   1.0
+  ],
+  [
+   "creatinnine",
+   "lab",
+   "creatinine",
+   1.0
+  ],
+  [
+   "creatniine",
+   "lab",
+   "creatinine",
+   1.0
+  ],
+  [
+   "creatnine",
+   "lab",
+   "creatinine",
+   1.0
+  ],
+  [
+   "creattinine",
+   "lab",
+   "creatinine",
+   1.0
+  ],
+  [
+   "creeatinine",
+   "lab",
+   "creatinine",
+   1.0
+  ],
+  [
+   "cretainine",
+   "lab",
+   "creatinine",
+   1.0
+  ],
+  [
+   "cretinine",
+   "lab",
+   "creatinine",
+   1.0
+  ],
+  [
+   "crhonic kidney",
+   "condition",
+   "ckd",
+   1.0
+  ],
+  [
+   "crhonic kidney disease",
+   "condition",
+   "ckd",
+   1.0
+  ],
+  [
+   "croonary artery",
+   "condition",
+   "cad",
+   0.75
+  ],
+  [
+   "croonary artery disease",
+   "condition",
+   "cad",
+   0.75
+  ],
+  [
+   "crreatinine",
+   "lab",
+   "creatinine",
+   1.0
+  ],
+  [
+   "dabetes mellitus",
+   "condition",
+   "t2dm",
+   0.826
+  ],
+  [
+   "decompensation",
+   "condition",
+   "hf",
+   1.0
+  ],
+  [
+   "deep vein throbosis",
+   "condition",
+   "dvt",
+   0.727
+  ],
+  [
+   "depressie disorder",
+   "condition",
+   "depression",
+   0.75
+  ],
+  [
+   "depressvie disorder",
+   "condition",
+   "depression",
+   0.733
+  ],
+  [
+   "diaabetes mellitus",
+   "condition",
+   "t2dm",
+   0.778
+  ],
+  [
+   "diabbetes mellitus",
+   "condition",
+   "t2dm",
+   0.933
+  ],
+  [
+   "diabeetes mellitus",
+   "condition",
+   "t2dm",
+   0.778
+  ],
+  [
+   "diabeets mellitus",
+   "condition",
+   "t2dm",
+   0.833
+  ],
+  [
+   "diabetees mellitus",
+   "condition",
+   "t2dm",
+   0.714
+  ],
+  [
+   "diabets mellitus",
+   "condition",
+   "t2dm",
+   0.867
+  ],
+  [
+   "diabetse mellitus",
+   "condition",
+   "t2dm",
+   0.792
+  ],
+  [
+   "diabettes",
+   "condition",
+   "t2dm",
+   0.87
+  ],
+  [
+   "diabettes mellitus",
+   "condition",
+   "t2dm",
+   0.923
+  ],
+  [
+   "diaebtes mellitus",
+   "condition",
+   "t2dm",
+   0.857
+  ],
+  [
+   "diaetes mellitus",
+   "condition",
+   "t2dm",
+   0.864
+  ],
+  [
+   "dibaetes mellitus",
+   "condition",
+   "t2dm",
+   0.789
+  ],
+  [
+   "dibetes",
+   "condition",
+   "t2dm",
+   0.939
+  ],
+  [
+   "dibetes mellitus",
+   "condition",
+   "t2dm",
+   0.947
+  ],
+  [
+   "digoxn",
+   "drug",
+   "digoxin",
+   1.0
+  ],
+  [
+   "eiquis",
+   "drug",
+   "apixaban",
+   1.0
+  ],
+  [
+   "failue",
+   "condition",
+   "hf",
+   1.0
+  ],
+  [
+   "failuer",
+   "condition",
+   "hf",
+   1.0
+  ],
+  [
+   "falure",
+   "condition",
+   "hf",
+   1.0
+  ],
+  [
+   "fbrillation",
+   "condition",
+   "afib",
+   1.0
+  ],
+  [
+   "fibrilation",
+   "condition",
+   "afib",
+   1.0
+  ],
+  [
+   "fibrillaiton",
+   "condition",
+   "afib",
+   1.0
+  ],
+  [
+   "fibrillation",
+   "condition",
+   "afib",
+   1.0
+  ],
+  [
+   "fibrillaton",
+   "condition",
+   "afib",
+   1.0
+  ],
+  [
+   "filure",
+   "condition",
+   "hf",
+   1.0
+  ],
+  [
+   "fliud",
+   "drug",
+   "furosemide",
+   1.0
+  ],
+  [
+   "fliud pill",
+   "drug",
+   "furosemide",
+   1.0
+  ],
+  [
+   "flluid",
+   "drug",
+   "furosemide",
+   1.0
+  ],
+  [
+   "flluid pill",
+   "drug",
+   "furosemide",
+   1.0
+  ],
+  [
+   "flud pill",
+   "drug",
+   "furosemide",
+   1.0
+  ],
+  [
+   "fludi pill",
+   "drug",
+   "furosemide",
+   1.0
+  ],
+  [
+   "fluid",
+   "drug",
+   "furosemide",
+   1.0
+  ],
+  [
+   "fluid pill",
+   "drug",
+   "furosemide",
+   1.0
+  ],
+  [
+   "fluuid pill",
+   "drug",
+   "furosemide",
+   1.0
+  ],
+  [
+   "glcose",
+   "lab",
+   "glucose",
+   1.0
+  ],
+  [
+   "glcuose",
+   "lab",
+   "glucose",
+   1.0
+  ],
+  [
+   "gllucose",
+   "lab",
+   "glucose",
+   1.0
+  ],
+  [
+   "gluccose",
+   "lab",
+   "glucose",
+   1.0
+  ],
+  [
+   "glucoe",
+   "lab",
+   "glucose",
+   1.0
+  ],
+  [
+   "glucoes",
+   "lab",
+   "glucose",
+   1.0
+  ],
+  [
+   "glucoose",
+   "lab",
+   "glucose",
+   1.0
+  ],
+  [
+   "glucosse",
+   "lab",
+   "glucose",
+   1.0
+  ],
+  [
+   "glucse",
+   "lab",
+   "glucose",
+   1.0
+  ],
+  [
+   "glucsoe",
+   "lab",
+   "glucose",
+   1.0
+  ],
+  [
+   "gluocse",
+   "lab",
+   "glucose",
+   1.0
+  ],
+  [
+   "gluose",
+   "lab",
+   "glucose",
+   1.0
+  ],
+  [
+   "gluucose",
+   "lab",
+   "glucose",
+   1.0
+  ],
+  [
+   "gotuy toe",
+   "condition",
+   "gout",
+   1.0
+  ],
+  [
+   "gouty",
+   "condition",
+   "gout",
+   1.0
+  ],
+  [
+   "gouty toe",
+   "condition",
+   "gout",
+   1.0
+  ],
+  [
+   "gucose",
+   "lab",
+   "glucose",
+   1.0
+  ],
+  [
+   "gulcose",
+   "lab",
+   "glucose",
+   1.0
+  ],
+  [
+   "hart",
+   "condition",
+   "hf",
+   1.0
+  ],
+  [
+   "heaart",
+   "condition",
+   "hf",
+   1.0
+  ],
+  [
+   "headaches",
+   "condition",
+   "migraine",
+   1.0
+  ],
+  [
+   "hearburn trouble",
+   "condition",
+   "gerd",
+   1.0
+  ],
+  [
+   "heart faailure",
+   "condition",
+   "hf",
+   1.0
+  ],
+  [
+   "heart faiilure",
+   "condition",
+   "hf",
+   1.0
+  ],
+  [
+   "heart faillure",
+   "condition",
+   "hf",
+   1.0
+  ],
+  [
+   "heart failre",
+   "condition",
+   "hf",
+   1.0
+  ],
+  [
+   "heart failrue",
+   "condition",
+   "hf",
+   1.0
+  ],
+  [
+   "heart failue",
+   "condition",
+   "hf",
+   1.0
+  ],
+  [
+   "heart failuer",
+   "condition",
+   "hf",
+   1.0
+  ],
+  [
+   "heart faiure",
+   "condition",
+   "hf",
+   1.0
+  ],
+  [
+   "heart faliure",
+   "condition",
+   "hf",
+   1.0
+  ],
+  [
+   "heart falure",
+   "condition",
+   "hf",
+   1.0
+  ],
+  [
+   "heart fialure",
+   "condition",
+   "hf",
+   1.0
+  ],
+  [
+   "heart filure",
+   "condition",
+   "hf",
+   1.0
+  ],
+  [
+   "heartbeat",
+   "condition",
+   "afib",
+   1.0
+  ],
+  [
+   "heartburn",
+   "condition",
+   "gerd",
+   1.0
+  ],
+  [
+   "heartburn trouble",
+   "condition",
+   "gerd",
+   1.0
+  ],
+  [
+   "heemoglobin",
+   "lab",
+   "hemoglobin",
+   0.875
+  ],
+  [
+   "hemoglbin",
+   "lab",
+   "hemoglobin",
+   0.893
+  ],
+  [
+   "hemoglboin",
+   "lab",
+   "hemoglobin",
+   0.875
+  ],
+  [
+   "hemogllobin",
+   "lab",
+   "hemoglobin",
+   0.941
+  ],
+  [
+   "hemoglobbin",
+   "lab",
+   "hemoglobin",
+   0.944
+  ],
+  [
+   "hemoglobn",
+   "lab",
+   "hemoglobin",
+   0.92
+  ],
+  [
+   "hemoglobni",
+   "lab",
+   "hemoglobin",
+   0.9
+  ],
+  [
+   "hemogloibn",
+   "lab",
+   "hemoglobin",
+   0.889
+  ],
+  [
+   "hemolgobin",
+   "lab",
+   "hemoglobin",
+   0.917
+  ],
+  [
+   "heomglobin",
+   "lab",
+   "hemoglobin",
+   0.867
+  ],
+  [
+   "hep",
+   "condition",
+   "hepc",
+   1.0
+  ],
+  [
+   "hep c",
+   "condition",
+   "hepc",
+   1.0
+  ],
+  [
+   "hi blood",
+   "condition",
+   "htn",
+   0.87
+  ],
+  [
+   "hi blood pressure",
+   "condition",
+   "htn",
+   0.871
+  ],
+  [
+   "high blood",
+   "condition",
+   "htn",
+   0.87
+  ],
+  [
+   "high blood pessure",
+   "condition",
+   "htn",
+   0.857
+  ],
+  [
+   "high blood pressre",
+   "condition",
+   "htn",
+   1.0
+  ],
+  [
+   "high blood pressrue",
+   "condition",
+   "htn",
+   1.0
+  ],
+  [
+   "high blood presssure",
+   "condition",
+   "htn",
+   1.0
+  ],
+  [
+   "high blood presure",
+   "condition",
+   "htn",
+   0.75
+  ],
+  [
+   "high blood presusre",
+   "condition",
+   "htn",
+   0.889
+  ],
+  [
+   "high blood prsesure",
+   "condition",
+   "htn",
+   1.0
+  ],
+  [
+   "high blood prssure",
+   "condition",
+   "htn",
+   0.929
+  ],
+  [
+   "high bp",
+   "condition",
+   "htn",
+   0.864
+  ],
+  [
+   "high potsasium",
+   "condition",
+   "hyperkalemia",
+   1.0
+  ],
+  [
+   "hyperetnsion",
+   "condition",
+   "htn",
+   0.889
+  ],
+  [
+   "ifection of leg",
+   "condition",
+   "cellulitis",
+   1.0
+  ],
+  [
+   "inefction of leg",
+   "condition",
+   "cellulitis",
+   1.0
+  ],
+  [
+   "infection of leg",
+   "condition",
+   "cellulitis",
+   1.0
+  ],
+  [
+   "insulin",
+   "drug",
+   "insulin_glargine",
+   1.0
+  ],
+  [
+   "iregular heartbeat",
+   "condition",
+   "afib",
+   1.0
+  ],
+  [
+   "irergular heartbeat",
+   "condition",
+   "afib",
+   1.0
+  ],
+  [
+   "irreegular heartbeat",
+   "condition",
+   "afib",
+   1.0
+  ],
+  [
+   "irreguar heartbeat",
+   "condition",
+   "afib",
+   1.0
+  ],
+  [
+   "irregular",
+   "condition",
+   "afib",
+   1.0
+  ],
+  [
+   "irregular heartbeat",
+   "condition",
+   "afib",
+   1.0
+  ],
+  [
+   "irregulr heartbeat",
+   "condition",
+   "afib",
+   1.0
+  ],
+  [
+   "irregulra heartbeat",
+   "condition",
+   "afib",
+   1.0
+  ],
+  [
+   "irrregular heartbeat",
+   "condition",
+   "afib",
+   1.0
+  ],
+  [
+   "iscehmic heart",
+   "condition",
+   "cad",
+   0.75
+  ],
+  [
+   "iscehmic heart disease",
+   "condition",
+   "cad",
+   0.75
+  ],
+  [
+   "ischmeic heart",
+   "condition",
+   "cad",
+   0.714
+  ],
+  [
+   "ischmeic heart disease",
+   "condition",
+   "cad",
+   0.714
+  ],
+  [
+   "ischmic heart",
+   "condition",
+   "cad",
+   0.812
+  ],
+  [
+   "ischmic heart disease",
+   "condition",
+   "cad",
+   0.812
+  ],
+  [
+   "joint",
+   "condition",
+   "oa",
+   1.0
+  ],
+  [
+   "joint disease",
+   "condition",
+   "oa",
+   1.0
+  ],
+  [
+   "kidney",
+   "condition",
+   "ckd",
+   0.891
+  ],
+  [
+   "kidney disease",
+   "condition",
+   "ckd",
+   0.914
+  ],
+  [
+   "kidney toruble",
+   "condition",
+   "ckd",
+   0.909
+  ],
+  [
+   "kidney troble",
+   "condition",
+   "ckd",
+   1.0
+  ],
+  [
+   "kidney troubel",
+   "condition",
+   "ckd",
+   0.917
+  ],
+  [
+   "kidney trouble",
+   "condition",
+   "ckd",
+   0.886
+  ],
+  [
+   "knees",
+   "condition",
+   "oa",
+   1.0
+  ],
+  [
+   "level",
+   "lab",
+   "glucose",
+   1.0
+  ],
+  [
+   "lovnox",
+   "drug",
+   "enoxaparin",
+   1.0
+  ],
+  [
+   "low blod",
+   "condition",
+   "anemia",
+   1.0
+  ],
+  [
+   "low blood",
+   "condition",
+   "anemia",
+   1.0
+  ],
+  [
+   "low bloood",
+   "condition",
+   "anemia",
+   1.0
+  ],
+  [
+   "low poassium",
+   "condition",
+   "hypokalemia",
+   1.0
+  ],
+  [
+   "low potaassium",
+   "condition",
+   "hypokalemia",
+   1.0
+  ],
+  [
+   "low potasium",
+   "condition",
+   "hypokalemia",
+   1.0
+  ],
+  [
+   "low potassimu",
+   "condition",
+   "hypokalemia",
+   1.0
+  ],
+  [
+   "low potasssium",
+   "condition",
+   "hypokalemia",
+   1.0
+  ],
+  [
+   "low potsasium",
+   "condition",
+   "hypokalemia",
+   1.0
+  ],
+  [
+   "low ptassium",
+   "condition",
+   "hypokalemia",
+   1.0
+  ],
+  [
+   "low thyroid",
+   "condition",
+   "hypothyroid",
+   1.0
+  ],
+  [
+   "lpiitor",
+   "drug",
+   "atorvastatin",
+   1.0
+  ],
+  [
+   "lung disease",
+   "condition",
+   "copd",
+   0.918
+  ],
+  [
+   "mellitus type",
+   "condition",
+   "t2dm",
+   0.753
+  ],
+  [
+   "metoprollo",
+   "drug",
+   "metoprolol",
+   1.0
+  ],
+  [
+   "nephropathy",
+   "condition",
+   "ckd",
+   0.88
+  ],
+  [
+   "nerves",
+   "condition",
+   "anxiety",
+   1.0
+  ],
+  [
+   "obeesity",
+   "condition",
+   "obesity",
+   1.0
+  ],
+  [
+   "obeity",
+   "condition",
+   "obesity",
+   1.0
+  ],
+  [
+   "obesiy",
+   "condition",
+   "obesity",
+   1.0
+  ],
+  [
+   "obestiy",
+   "condition",
+   "obesity",
+   1.0
+  ],
+  [
+   "obseity",
+   "condition",
+   "obesity",
+   1.0
+  ],
+  [
+   "obsructive pulmonary",
+   "condition",
+   "copd",
+   1.0
+  ],
+  [
+   "obsructive pulmonary disease",
+   "condition",
+   "copd",
+   1.0
+  ],
+  [
+   "obstrucive",
+   "condition",
+   "copd",
+   0.95
+  ],
+  [
+   "obstrucive pulmonary",
+   "condition",
+   "copd",
+   0.944
+  ],
+  [
+   "obstrucive pulmonary disease",
+   "condition",
+   "copd",
+   0.944
+  ],
+  [
+   "obstruction",
+   "condition",
+   "copd",
+   0.912
+  ],
+  [
+   "obstructve pulmonary",
+   "condition",
+   "copd",
+   1.0
+  ],
+  [
+   "obstructve pulmonary disease",
+   "condition",
+   "copd",
+   1.0
+  ],
+  [
+   "obstructvie",
+   "condition",
+   "copd",
+   0.944
+  ],
+  [
+   "obstructvie pulmonary",
+   "condition",
+   "copd",
+   0.933
+  ],
+  [
+   "obstructvie pulmonary disease",
+   "condition",
+   "copd",
+   0.933
+  ],
+  [
+   "obsturctive pulmonary",
+   "condition",
+   "copd",
+   0.923
+  ],
+  [
+   "obsturctive pulmonary disease",
+   "condition",
+   "copd",
+   0.923
+  ],
+  [
+   "obtructive pulmonary",
+   "condition",
+   "copd",
+   0.846
+  ],
+  [
+   "obtructive pulmonary disease",
+   "condition",
+   "copd",
+   0.846
+  ],
+  [
+   "obtsructive pulmonary",
+   "condition",
+   "copd",
+   0.923
+  ],
+  [
+   "obtsructive pulmonary disease",
+   "condition",
+   "copd",
+   0.923
+  ],
+  [
+   "oebsity",
+   "condition",
+   "obesity",
+   1.0
+  ],
+  [
+   "oesity",
+   "condition",
+   "obesity",
+   1.0
+  ],
+  [
+   "off baby",
+   "drug",
+   "apixaban",
+   0.714
+  ],
+  [
+   "onset diabetes",
+   "condition",
+   "t2dm",
+   0.761
+  ],
+  [
+   "pen",
+   "allergen",
+   "penicillin",
+   0.991
+  ],
+  [
+   "pen -",
+   "allergen",
+   "penicillin",
+   1.0
+  ],
+  [
+   "pen - severe",
+   "allergen",
+   "penicillin",
+   1.0
+  ],
+  [
+   "pen - severe anaphylactic",
+   "allergen",
+   "penicillin",
+   1.0
+  ],
+  [
+   "pen - severe anaphylaxis",
+   "allergen",
+   "penicillin",
+   1.0
+  ],
+  [
+   "pen - wheezing",
+   "allergen",
+   "penicillin",
+   1.0
+  ],
+  [
+   "pirlosec",
+   "drug",
+   "omeprazole",
+   1.0
+  ],
+  [
+   "potasium chloride",
+   "drug",
+   "potassium_chloride",
+   1.0
+  ],
+  [
+   "presssure",
+   "condition",
+   "htn",
+   1.0
+  ],
+  [
+   "pressure",
+   "condition",
+   "htn",
+   0.871
+  ],
+  [
+   "prostate",
+   "condition",
+   "bph",
+   1.0
+  ],
+  [
+   "prostatic",
+   "condition",
+   "bph",
+   1.0
+  ],
+  [
+   "prssure",
+   "condition",
+   "htn",
+   0.889
+  ],
+  [
+   "pulmonary",
+   "condition",
+   "copd",
+   0.91
+  ],
+  [
+   "pulmonary disease",
+   "condition",
+   "copd",
+   0.91
+  ],
+  [
+   "raective airway",
+   "condition",
+   "asthma",
+   1.0
+  ],
+  [
+   "raective airway disease",
+   "condition",
+   "asthma",
+   1.0
+  ],
+  [
+   "reacitve airway",
+   "condition",
+   "asthma",
+   1.0
+  ],
+  [
+   "reacitve airway disease",
+   "condition",
+   "asthma",
+   1.0
+  ],
+  [
+   "reactiev airway",
+   "condition",
+   "asthma",
+   1.0
+  ],
+  [
+   "reactiev airway disease",
+   "condition",
+   "asthma",
+   1.0
+  ],
+  [
+   "reactve airway",
+   "condition",
+   "asthma",
+   1.0
+  ],
+  [
+   "reactve airway disease",
+   "condition",
+   "asthma",
+   1.0
+  ],
+  [
+   "reactvie airway",
+   "condition",
+   "asthma",
+   1.0
+  ],
+  [
+   "reactvie airway disease",
+   "condition",
+   "asthma",
+   1.0
+  ],
+  [
+   "recative airway",
+   "condition",
+   "asthma",
+   1.0
+  ],
+  [
+   "recative airway disease",
+   "condition",
+   "asthma",
+   1.0
+  ],
+  [
+   "reflux",
+   "condition",
+   "gerd",
+   1.0
+  ],
+  [
+   "reflux disease",
+   "condition",
+   "gerd",
+   1.0
+  ],
+  [
+   "renal",
+   "condition",
+   "ckd",
+   0.883
+  ],
+  [
+   "replacement",
+   "drug",
+   "levothyroxine",
+   1.0
+  ],
+  [
+   "sdium",
+   "lab",
+   "sodium",
+   1.0
+  ],
+  [
+   "sdoium",
+   "lab",
+   "sodium",
+   1.0
+  ],
+  [
+   "seepsis",
+   "condition",
+   "sepsis",
+   1.0
+  ],
+  [
+   "sepis",
+   "condition",
+   "sepsis",
+   1.0
+  ],
+  [
+   "sepiss",
+   "condition",
+   "sepsis",
+   1.0
+  ],
+  [
+   "sepsiis",
+   "condition",
+   "sepsis",
+   1.0
+  ],
+  [
+   "sepss",
+   "condition",
+   "sepsis",
+   1.0
+  ],
+  [
+   "sepssi",
+   "condition",
+   "sepsis",
+   1.0
+  ],
+  [
+   "sepssis",
+   "condition",
+   "sepsis",
+   1.0
+  ],
+  [
+   "septra",
+   "drug",
+   "tmp_smx",
+   1.0
+  ],
+  [
+   "sesis",
+   "condition",
+   "sepsis",
+   1.0
+  ],
+  [
+   "sespis",
+   "condition",
+   "sepsis",
+   1.0
+  ],
+  [
+   "sgar level",
+   "lab",
+   "glucose",
+   1.0
+  ],
+  [
+   "sgar pill",
+   "drug",
+   "metformin",
+   1.0
+  ],
+  [
+   "sguar level",
+   "lab",
+   "glucose",
+   1.0
+  ],
+  [
+   "sguar pill",
+   "drug",
+   "metformin",
+   1.0
+  ],
+  [
+   "skin",
+   "condition",
+   "cellulitis",
+   0.976
+  ],
+  [
+   "skin ifection",
+   "condition",
+   "cellulitis",
+   1.0
+  ],
+  [
+   "skin ifection of leg",
+   "condition",
+   "cellulitis",
+   1.0
+  ],
+  [
+   "skin inefction",
+   "condition",
+   "cellulitis",
+   1.0
+  ],
+  [
+   "skin inefction of leg",
+   "condition",
+   "cellulitis",
+   1.0
+  ],
+  [
+   "skin infection",
+   "condition",
+   "cellulitis",
+   1.0
+  ],
+  [
+   "skin infection of leg",
+   "condition",
+   "cellulitis",
+   1.0
+  ],
+  [
+   "smoking",
+   "condition",
+   "copd",
+   0.912
+  ],
+  [
+   "soddium",
+   "lab",
+   "sodium",
+   1.0
+  ],
+  [
+   "sodiium",
+   "lab",
+   "sodium",
+   1.0
+  ],
+  [
+   "sodim",
+   "lab",
+   "sodium",
+   1.0
+  ],
+  [
+   "sodimu",
+   "lab",
+   "sodium",
+   1.0
+  ],
+  [
+   "sodiuum",
+   "lab",
+   "sodium",
+   1.0
+  ],
+  [
+   "soduim",
+   "lab",
+   "sodium",
+   1.0
+  ],
+  [
+   "sodum",
+   "lab",
+   "sodium",
+   1.0
+  ],
+  [
+   "soidum",
+   "lab",
+   "sodium",
+   1.0
+  ],
+  [
+   "soium",
+   "lab",
+   "sodium",
+   1.0
+  ],
+  [
+   "soodium",
+   "lab",
+   "sodium",
+   1.0
+  ],
+  [
+   "spesis",
+   "condition",
+   "sepsis",
+   1.0
+  ],
+  [
+   "spsis",
+   "condition",
+   "sepsis",
+   1.0
+  ],
+  [
+   "stomach",
+   "condition",
+   "pud",
+   1.0
+  ],
+  [
+   "stomach ulcer",
+   "condition",
+   "pud",
+   1.0
+  ],
+  [
+   "suagr level",
+   "lab",
+   "glucose",
+   1.0
+  ],
+  [
+   "suar level",
+   "lab",
+   "glucose",
+   1.0
+  ],
+  [
+   "suar pill",
+   "drug",
+   "metformin",
+   1.0
+  ],
+  [
+   "sugaar level",
+   "lab",
+   "glucose",
+   1.0
+  ],
+  [
+   "sugar dabetes",
+   "condition",
+   "t2dm",
+   0.727
+  ],
+  [
+   "sugar diabbetes",
+   "condition",
+   "t2dm",
+   0.75
+  ],
+  [
+   "sugar diabeets",
+   "condition",
+   "t2dm",
+   0.786
+  ],
+  [
+   "sugar diabetes",
+   "condition",
+   "t2dm",
+   0.78
+  ],
+  [
+   "sugar diabets",
+   "condition",
+   "t2dm",
+   0.75
+  ],
+  [
+   "sugar diabtes",
+   "condition",
+   "t2dm",
+   1.0
+  ],
+  [
+   "sugar diaetes",
+   "condition",
+   "t2dm",
+   0.75
+  ],
+  [
+   "sugar dibaetes",
+   "condition",
+   "t2dm",
+   0.75
+  ],
+  [
+   "sugar dibetes",
+   "condition",
+   "t2dm",
+   0.923
+  ],
+  [
+   "sugar level",
+   "lab",
+   "glucose",
+   1.0
+  ],
+  [
+   "sugar pill",
+   "drug",
+   "metformin",
+   1.0
+  ],
+  [
+   "suggar level",
+   "lab",
+   "glucose",
+   1.0
+  ],
+  [
+   "sugr level",
+   "lab",
+   "glucose",
+   1.0
+  ],
+  [
+   "sugra level",
+   "lab",
+   "glucose",
+   1.0
+  ],
+  [
+   "suugar level",
+   "lab",
+   "glucose",
+   1.0
+  ],
+  [
+   "t4 replacement",
+   "drug",
+   "levothyroxine",
+   1.0
+  ],
+  [
+   "takes blood",
+   "drug",
+   "warfarin",
+   1.0
+  ],
+  [
+   "takes blood thinner",
+   "drug",
+   "warfarin",
+   1.0
+  ],
+  [
+   "takes blood thinner pill",
+   "drug",
+   "warfarin",
+   1.0
+  ],
+  [
+   "takes fluid",
+   "drug",
+   "furosemide",
+   1.0
+  ],
+  [
+   "takes fluid pill",
+   "drug",
+   "furosemide",
+   1.0
+  ],
+  [
+   "takes septra",
+   "drug",
+   "tmp_smx",
+   1.0
+  ],
+  [
+   "takes sugar",
+   "drug",
+   "metformin",
+   1.0
+  ],
+  [
+   "takes sugar pill",
+   "drug",
+   "metformin",
+   1.0
+  ],
+  [
+   "takes thyroid",
+   "drug",
+   "levothyroxine",
+   1.0
+  ],
+  [
+   "takes thyroid pill",
+   "drug",
+   "levothyroxine",
+   1.0
+  ],
+  [
+   "thin",
+   "condition",
+   "osteoporosis",
+   1.0
+  ],
+  [
+   "thin bones",
+   "condition",
+   "osteoporosis",
+   1.0
+  ],
+  [
+   "thin bonse",
+   "condition",
+   "osteoporosis",
+   1.0
+  ],
+  [
+   "thinenr pill",
+   "drug",
+   "warfarin",
+   1.0
+  ],
+  [
+   "thiner pill",
+   "drug",
+   "warfarin",
+   1.0
+  ],
+  [
+   "thinner",
+   "drug",
+   "warfarin",
+   1.0
+  ],
+  [
+   "thinner pill",
+   "drug",
+   "warfarin",
+   1.0
+  ],
+  [
+   "thinnr pill",
+   "drug",
+   "warfarin",
+   1.0
+  ],
+  [
+   "thyroid pill",
+   "drug",
+   "levothyroxine",
+   1.0
+  ],
+  [
+   "tlenol",
+   "drug",
+   "acetaminophen",
+   1.0
+  ],
+  [
+   "toe",
+   "condition",
+   "gout",
+   1.0
+  ],
+  [
+   "took off baby",
+   "drug",
+   "apixaban",
+   0.714
+  ],
+  [
+   "trimethoprim",
+   "drug",
+   "tmp_smx",
+   1.0
+  ],
+  [
+   "tylneol",
+   "drug",
+   "acetaminophen",
+   1.0
+  ],
+  [
+   "ulcer",
+   "condition",
+   "pud",
+   1.0
+  ],
+  [
+   "vein throbosis",
+   "condition",
+   "dvt",
+   0.727
+  ],
+  [
+   "wafrarin",
+   "drug",
+   "warfarin",
+   1.0
+  ],
+  [
+   "water",
+   "drug",
+   "hydrochlorothiazide",
+   1.0
+  ],
+  [
+   "water pill",
+   "drug",
+   "hydrochlorothiazide",
+   1.0
+  ],
+  [
+   "weak",
+   "condition",
+   "hf",
+   1.0
+  ],
+  [
+   "weak hart",
+   "condition",
+   "hf",
+   1.0
+  ],
+  [
+   "weak heaart",
+   "condition",
+   "hf",
+   1.0
+  ],
+  [
+   "weak hearrt",
+   "condition",
+   "hf",
+   1.0
+  ],
+  [
+   "weak heart",
+   "condition",
+   "hf",
+   1.0
+  ],
+  [
+   "weak heat",
+   "condition",
+   "hf",
+   1.0
+  ],
+  [
+   "weak heatr",
+   "condition",
+   "hf",
+   1.0
+  ],
+  [
+   "weak herat",
+   "condition",
+   "hf",
+   1.0
+  ],
+  [
+   "weak hert",
+   "condition",
+   "hf",
+   1.0
+  ]
+ ],
+ "headers": {
+  "reason": "pmh",
+  "prior hx": "pmh",
+  "rx": "meds",
+  "sx review": "ros",
+  "going home on": "meds"
+ },
+ "n_train": 40000,
+ "seconds": 31.528805017471313,
+ "holdout": "Site-B"
+}
