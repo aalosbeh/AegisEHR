@@ -126,7 +126,12 @@ def main():
     for p in sorted(LLM.glob("*.jsonl")):
         tag = p.stem
         runs[tag] = {d["id"]: d for d in map(json.loads, p.open())}
-    models = sorted({t.rsplit("_", 1)[0] for t in runs if t.endswith("_direct")})
+    # a model enters only once its direct run covers the whole subset; partial runs are reported, not analysed
+    models = sorted({t.rsplit("_", 1)[0] for t in runs if t.endswith("_direct")
+                     and len(set(runs[t]) & set(ids)) >= len(ids) * 0.95})
+    for t in sorted(runs):
+        if t.endswith("_direct") and t.rsplit("_", 1)[0] not in models:
+            print(f"skipping incomplete run {t}: {len(runs[t])}/{len(ids)}")
     common = [i for i in ids if all(i in runs[f"{m}_direct"] for m in models)]
     for v in ("validator", "reflect"):
         for m in models:
@@ -305,7 +310,8 @@ def main():
         adj = stats.holm(pv)
         T["tests"][m] = {k: dict(p=pv[k], p_holm=adj[k], **ef[k]) for k in pv}
         T["tests"][m]["_family"] = f"{len(pv)} comparisons for {m}: Holm-Bonferroni within model"
-    T["meta"] = {p.stem: json.loads(p.read_text()) for p in LLM.glob("*.meta.json")}
+    T["meta"] = {p.stem: json.loads(p.read_text()) for p in LLM.glob("*.meta.json")
+                 if p.stem.replace(".meta", "").rsplit("_", 1)[0] in models}
     T["records"] = common
     (TAB / "partB.json").write_text(json.dumps(T, indent=1, default=lambda o: o.tolist() if hasattr(o, "tolist") else str(o)))
     for s, d in T["systems"].items():

@@ -930,6 +930,194 @@
    "alerts_per_1000": 173.33333333333334,
    "pv_mcc": 0.3240584887862517
   },
+  "qwen2.5-7b_validator": {
+   "cf1": [
+    0.6702837569207432,
+    0.6455008690347079,
+    0.6961574265972637
+   ],
+   "spi": [
+    0.5800699353741485,
+    0.5513040869348305,
+    0.6084851565559458
+   ],
+   "halluc": [
+    0.2948104216045392,
+    0.2693172912871442,
+    0.31985446149710856
+   ],
+   "tf": [
+    0.7496616901616902,
+    0.7115279905279903,
+    0.7865418368668368
+   ],
+   "medbleu": [
+    0.5834544110854322,
+    0.5581821835194551,
+    0.607429901928219
+   ],
+   "acceptable": [
+    0.04,
+    0.013333333333333334,
+    0.07333333333333333
+   ],
+   "valid": [
+    0.84,
+    0.78,
+    0.9
+   ],
+   "swes": [
+    20.128333333333334,
+    18.319958333333332,
+    22.053458333333335
+   ],
+   "precision": [
+    0.7051895783954607,
+    0.6801455385028914,
+    0.7306827087128558
+   ],
+   "recall": [
+    0.6435471470157498,
+    0.617321431412485,
+    0.6707203771729373
+   ],
+   "utr": [
+    0.10440122824974411,
+    0.08472709647963148,
+    0.12424257606121333
+   ],
+   "tcr": [
+    0.9916,
+    0.9863776999793303,
+    0.9959679447653664
+   ],
+   "tcr_held": [
+    0.9948486799742434,
+    0.9875675397110798,
+    1.0
+   ],
+   "pv_sensitivity": 0.0,
+   "pv_ppv": 0.0,
+   "pv_specificity": 0.9824561403508771,
+   "pv_fpr": 0.017543859649122806,
+   "alerts_per_1000": 13.333333333333334,
+   "pv_mcc": -0.06532553344640132,
+   "coverage": 0.0,
+   "selective_acc": null,
+   "silent_error_rate": 0.0,
+   "automation_yield": 0.0,
+   "aurc": 0.9853335901843703,
+   "ece": 0.043821244796571526,
+   "brier": 0.04082619196668023,
+   "mce": 0.06989049387710233,
+   "at80": {
+    "coverage": 0.8,
+    "selective_acc": 0.025,
+    "silent_error": 0.78,
+    "yield_": 0.02
+   },
+   "at90": {
+    "coverage": 0.9,
+    "selective_acc": 0.02962962962962963,
+    "silent_error": 0.8733333333333333,
+    "yield_": 0.02666666666666667
+   },
+   "ece_raw": 0.9501890557122544
+  },
+  "qwen2.5-7b_reflect": {
+   "cf1": [
+    0.6128147912693088,
+    0.5796926987800937,
+    0.6455456733249411
+   ],
+   "spi": [
+    0.5184553636713415,
+    0.48590086370314695,
+    0.5519333007953767
+   ],
+   "halluc": [
+    0.30956032856032856,
+    0.28049743505405267,
+    0.3377330020741785
+   ],
+   "tf": [
+    0.6824188034188033,
+    0.6336436327561328,
+    0.7261426221926222
+   ],
+   "medbleu": [
+    0.5100686256540911,
+    0.4799042979008283,
+    0.5410982756280641
+   ],
+   "acceptable": [
+    0.006666666666666667,
+    0.0,
+    0.02
+   ],
+   "valid": [
+    0.44666666666666666,
+    0.36666666666666664,
+    0.5266666666666666
+   ],
+   "swes": [
+    23.13,
+    21.308208333333333,
+    25.020041666666668
+   ],
+   "precision": [
+    0.6904396714396713,
+    0.6622669979258216,
+    0.7195025649459473
+   ],
+   "recall": [
+    0.5957253693781825,
+    0.5613120235981269,
+    0.6301804593151796
+   ],
+   "utr": [
+    0.13105726872246695,
+    0.10848948910140432,
+    0.1552665234111553
+   ],
+   "tcr": [
+    0.9915647406157739,
+    0.9861446581796095,
+    0.9962820927077674
+   ],
+   "tcr_held": [
+    0.9923398328690808,
+    0.9839158025319676,
+    0.9986738058832927
+   ],
+   "pv_sensitivity": 0.0,
+   "pv_ppv": 0.0,
+   "pv_specificity": 0.8333333333333334,
+   "pv_fpr": 0.16666666666666666,
+   "alerts_per_1000": 133.33333333333334,
+   "pv_mcc": -0.1744956101130282,
+   "coverage": 0.0,
+   "selective_acc": null,
+   "silent_error_rate": 0.0,
+   "automation_yield": 0.0,
+   "aurc": 0.9992506771902917,
+   "ece": 0.0064455513451038985,
+   "brier": 0.006666382627473814,
+   "mce": 0.0064455513451038985,
+   "at80": {
+    "coverage": 0.8,
+    "selective_acc": 0.0,
+    "silent_error": 0.8,
+    "yield_": 0.0
+   },
+   "at90": {
+    "coverage": 0.9,
+    "selective_acc": 0.007407407407407408,
+    "silent_error": 0.8933333333333333,
+    "yield_": 0.006666666666666667
+   },
+   "ece_raw": 0.959102905438838
+  },
   "qwen2.5-7b_aegis": {
    "cf1": [
     0.9779645584729074,
@@ -1259,7 +1447,9 @@
    },
    "mean_output_tokens": 1068.26,
    "mean_calls": 1.0,
-   "mean_wall_s": 17.81112158457438
+   "mean_wall_s": 17.81112158457438,
+   "median_wall_s": 15.682052850723267,
+   "tokens_per_s": 59.97713254201714
   },
   "llama3.2-3b_aegis": {
    "pre_gate_valid": 0.34,
@@ -1283,7 +1473,48 @@
    },
    "mean_output_tokens": 1507.68,
    "mean_calls": 1.0,
-   "mean_wall_s": 96.26286885897319
+   "mean_wall_s": 96.26286885897319,
+   "median_wall_s": 36.48061692714691,
+   "tokens_per_s": 15.662113729529274
+  },
+  "qwen2.5-7b_validator": {
+   "parsed": 1.0,
+   "valid": 0.84,
+   "errors": {
+    "terminology_valueset": 14,
+    "ucum_unit": 14,
+    "invalid_datetime": 1,
+    "datatype": 1,
+    "missing_required": 11
+   },
+   "mean_output_tokens": 2601.68,
+   "mean_calls": 1.62,
+   "mean_wall_s": 134.28965474764507,
+   "median_wall_s": 48.92648708820343,
+   "tokens_per_s": 19.373644268346915
+  },
+  "qwen2.5-7b_reflect": {
+   "parsed": 0.98,
+   "valid": 0.44666666666666666,
+   "errors": {
+    "unparseable_json": 3,
+    "terminology_valueset": 45,
+    "unknown_element": 37,
+    "value_set_binding": 12,
+    "missing_required": 18,
+    "ucum_unit": 21,
+    "invalid_datetime": 38,
+    "bundle_structure": 15,
+    "dangling_reference": 18,
+    "datatype": 26,
+    "duplicate_id": 1,
+    "empty_element": 1
+   },
+   "mean_output_tokens": 3435.1133333333332,
+   "mean_calls": 3.0,
+   "mean_wall_s": 160.2887860139211,
+   "median_wall_s": 101.52608251571655,
+   "tokens_per_s": 21.430777652998092
   },
   "qwen2.5-7b_aegis": {
    "pre_gate_valid": 0.62,
@@ -1395,47 +1626,131 @@
   "qwen2.5-7b": {
    "qwen2.5-7b_aegis_vs_qwen2.5-7b_direct:cf1": {
     "p": 9.999000099990002e-05,
-    "p_holm": 0.00039996000399960006,
+    "p_holm": 0.0011998800119988001,
     "mean_diff": 0.3163645069489379,
     "cohens_dz": 1.850952181694829,
     "cliffs_delta": 0.9398222222222222
    },
    "qwen2.5-7b_aegis_vs_qwen2.5-7b_direct:spi": {
     "p": 9.999000099990002e-05,
-    "p_holm": 0.00039996000399960006,
+    "p_holm": 0.0011998800119988001,
     "mean_diff": 0.39028301297173296,
     "cohens_dz": 2.027171142307239,
     "cliffs_delta": 0.9445777777777777
    },
    "qwen2.5-7b_aegis_vs_qwen2.5-7b_direct:tf": {
     "p": 9.999000099990002e-05,
-    "p_holm": 0.00039996000399960006,
+    "p_holm": 0.0011998800119988001,
     "mean_diff": 0.23042342842342856,
     "cohens_dz": 0.8084170316198968,
     "cliffs_delta": 0.7041777777777778
    },
    "qwen2.5-7b_aegis_vs_qwen2.5-7b_direct:medbleu": {
     "p": 9.999000099990002e-05,
-    "p_holm": 0.00039996000399960006,
+    "p_holm": 0.0011998800119988001,
     "mean_diff": 0.37394921583466567,
     "cohens_dz": 2.1650352058439304,
     "cliffs_delta": 0.954
    },
    "qwen2.5-7b_aegis_vs_qwen2.5-7b_direct:acceptable": {
     "p": 2.8698592549372254e-42,
-    "p_holm": 1.7219155529623352e-41,
+    "p_holm": 4.878760733393283e-41,
     "risk_difference": 0.9266666666666666,
     "n_aegis_only": 139,
     "n_baseline_only": 0
    },
    "qwen2.5-7b_aegis_vs_qwen2.5-7b_direct:valid": {
     "p": 5.551115123125783e-17,
-    "p_holm": 2.7755575615628914e-16,
+    "p_holm": 7.771561172376096e-16,
     "risk_difference": 0.3666666666666667,
     "n_aegis_only": 55,
     "n_baseline_only": 0
    },
-   "_family": "6 comparisons for qwen2.5-7b: Holm-Bonferroni within model"
+   "qwen2.5-7b_aegis_vs_qwen2.5-7b_validator:cf1": {
+    "p": 9.999000099990002e-05,
+    "p_holm": 0.0011998800119988001,
+    "mean_diff": 0.30768080155216426,
+    "cohens_dz": 1.7534420834688327,
+    "cliffs_delta": 0.9396444444444444
+   },
+   "qwen2.5-7b_aegis_vs_qwen2.5-7b_validator:spi": {
+    "p": 9.999000099990002e-05,
+    "p_holm": 0.0011998800119988001,
+    "mean_diff": 0.3861312007316855,
+    "cohens_dz": 1.9657921371743339,
+    "cliffs_delta": 0.9444
+   },
+   "qwen2.5-7b_aegis_vs_qwen2.5-7b_validator:tf": {
+    "p": 9.999000099990002e-05,
+    "p_holm": 0.0011998800119988001,
+    "mean_diff": 0.2291641136641137,
+    "cohens_dz": 0.8059303791753097,
+    "cliffs_delta": 0.7102666666666667
+   },
+   "qwen2.5-7b_aegis_vs_qwen2.5-7b_validator:medbleu": {
+    "p": 9.999000099990002e-05,
+    "p_holm": 0.0011998800119988001,
+    "mean_diff": 0.362745382171182,
+    "cohens_dz": 2.10593672208349,
+    "cliffs_delta": 0.9540888888888889
+   },
+   "qwen2.5-7b_aegis_vs_qwen2.5-7b_validator:acceptable": {
+    "p": 2.8698592549372254e-42,
+    "p_holm": 4.878760733393283e-41,
+    "risk_difference": 0.9266666666666666,
+    "n_aegis_only": 139,
+    "n_baseline_only": 0
+   },
+   "qwen2.5-7b_aegis_vs_qwen2.5-7b_validator:valid": {
+    "p": 1.049041748046875e-05,
+    "p_holm": 0.00013637542724609375,
+    "risk_difference": 0.14666666666666672,
+    "n_aegis_only": 24,
+    "n_baseline_only": 2
+   },
+   "qwen2.5-7b_aegis_vs_qwen2.5-7b_reflect:cf1": {
+    "p": 9.999000099990002e-05,
+    "p_holm": 0.0011998800119988001,
+    "mean_diff": 0.3651497672035986,
+    "cohens_dz": 1.5706304217650167,
+    "cliffs_delta": 0.9490222222222222
+   },
+   "qwen2.5-7b_aegis_vs_qwen2.5-7b_reflect:spi": {
+    "p": 9.999000099990002e-05,
+    "p_holm": 0.0011998800119988001,
+    "mean_diff": 0.44774577243449254,
+    "cohens_dz": 1.865706351337059,
+    "cliffs_delta": 0.9527555555555556
+   },
+   "qwen2.5-7b_aegis_vs_qwen2.5-7b_reflect:tf": {
+    "p": 9.999000099990002e-05,
+    "p_holm": 0.0011998800119988001,
+    "mean_diff": 0.2964070004070005,
+    "cohens_dz": 0.9413235642304488,
+    "cliffs_delta": 0.7832888888888889
+   },
+   "qwen2.5-7b_aegis_vs_qwen2.5-7b_reflect:medbleu": {
+    "p": 9.999000099990002e-05,
+    "p_holm": 0.0011998800119988001,
+    "mean_diff": 0.43613116760252313,
+    "cohens_dz": 1.9067623046232218,
+    "cliffs_delta": 0.9662666666666667
+   },
+   "qwen2.5-7b_aegis_vs_qwen2.5-7b_reflect:acceptable": {
+    "p": 8.96831017167883e-44,
+    "p_holm": 1.6142958309021893e-42,
+    "risk_difference": 0.96,
+    "n_aegis_only": 144,
+    "n_baseline_only": 0
+   },
+   "qwen2.5-7b_aegis_vs_qwen2.5-7b_reflect:valid": {
+    "p": 8.271806125530277e-25,
+    "p_holm": 1.2407709188295415e-23,
+    "risk_difference": 0.54,
+    "n_aegis_only": 81,
+    "n_baseline_only": 0
+   },
+   "_family": "18 comparisons for qwen2.5-7b: Holm-Bonferroni within model"
   }
  },
  "ablation": {},
@@ -1507,7 +1822,8 @@
     "format": "json"
    },
    "retry_policy": "validator: up to 2 retries with the first 15 validator errors; reflect: 1 critique + 1 revision",
-   "n_records": 150
+   "n_records": 150,
+   "finished": "2026-10-25T22:10:39.549454"
   },
   "qwen2.5-7b_direct.meta": {
    "model": {
@@ -1543,6 +1859,41 @@
    "retry_policy": "validator: up to 2 retries with the first 15 validator errors; reflect: 1 critique + 1 revision",
    "n_records": 150,
    "finished": "2026-10-25T19:50:58.771249"
+  },
+  "qwen2.5-7b_reflect.meta": {
+   "model": {
+    "model": "qwen2.5:7b",
+    "digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+    "details": {
+     "parent_model": "",
+     "format": "gguf",
+     "family": "qwen2",
+     "families": [
+      "qwen2"
+     ],
+     "parameter_size": "7.6B",
+     "quantization_level": "Q4_K_M"
+    },
+    "modified_at": "2026-10-21T17:04:17.898803965-06:00"
+   },
+   "variant": "reflect",
+   "started": "2026-10-25T22:10:42.151047",
+   "prompt_sha256": "626ebc41f28a6cc5dbb75a28f74448d38c0b957cb92471b48415bbfd9066cc28",
+   "few_shot_ids": [
+    "A-003261",
+    "B-000011"
+   ],
+   "options": {
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 10240,
+    "num_predict": 3000,
+    "top_p": 1.0,
+    "format": "json"
+   },
+   "retry_policy": "validator: up to 2 retries with the first 15 validator errors; reflect: 1 critique + 1 revision",
+   "n_records": 150,
+   "finished": "2026-10-26T00:50:46.123689"
   }
  },
  "reasoning_actions": {
@@ -1672,6 +2023,32 @@
    "missed_allergen": 18,
    "hallucinated_allergen": 3,
    "dose_error": 2
+  },
+  "qwen2.5-7b_validator": {
+   "hallucinated_condition": 173,
+   "hallucinated_drug": 207,
+   "missed_drug": 243,
+   "drug_status": 9,
+   "fabricated_timestamp": 102,
+   "unknown_code": 14,
+   "missed_major_signal": 25,
+   "fhir_invalid": 24,
+   "missed_allergen": 18,
+   "hallucinated_allergen": 3,
+   "dose_error": 2
+  },
+  "qwen2.5-7b_reflect": {
+   "hallucinated_condition": 181,
+   "hallucinated_drug": 181,
+   "missed_drug": 256,
+   "drug_status": 21,
+   "fhir_invalid": 83,
+   "fabricated_timestamp": 119,
+   "unknown_code": 55,
+   "missed_major_signal": 25,
+   "hallucinated_allergen": 11,
+   "missed_allergen": 13,
+   "dose_error": 1
   },
   "qwen2.5-7b_aegis": {
    "fhir_invalid": 2,
